@@ -6,10 +6,15 @@ using UnityEngine.UI;
 public class TileController : MonoBehaviour
 {
     public MeshRenderer meshRenderer;
+    public Tile tile;
+ 
 
-    public void Awake()
+ 
+    public void Initialize(Tile tile)
     {
-        meshRenderer = GetComponent<MeshRenderer>();
+        this.tile = tile;
+        meshRenderer.material = TileManager.instance.tileMaterials[(int)tile.type];
+
     }
    
     private void OnMouseDown()
