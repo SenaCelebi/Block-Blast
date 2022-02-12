@@ -95,7 +95,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 6, y: 5, z: 9.5}
+  m_Size: {x: 6, y: 8, z: 9.5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8211872520642869333
 MonoBehaviour:
@@ -110,6 +110,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   meshRenderer: {fileID: 8211872520642869320}
+  type: 0
+  coordinates: {x: 0, y: 0, z: 0}
 --- !u!54 &8211872520642869332
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -125,4 +127,4 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 122
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2

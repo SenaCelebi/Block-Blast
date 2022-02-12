@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.574817, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311926, g: 0.38073996, b: 0.35872698, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -150,7 +150,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 117246801}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -3.04, z: 0}
+  m_LocalPosition: {x: 0, y: -2.8, z: 0}
   m_LocalScale: {x: 7, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 342516112}
@@ -719,23 +719,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcb9f1f2adc99b4e82c876815a9d273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileMaterials:
-  - {fileID: 2100000, guid: a934e4c451ab06a43973f5fc41aca8d0, type: 2}
-  - {fileID: 2100000, guid: f219100bd8d4ea8468e43f5c62051b4e, type: 2}
-  - {fileID: 2100000, guid: 68619471fafa8974a954b871fc60e8c7, type: 2}
-  - {fileID: 2100000, guid: 35cf953218671264e91edfa257bc3eb9, type: 2}
-  - {fileID: 2100000, guid: 2ab6d6be65a997645b01c8b8dd1cd75b, type: 2}
-  - {fileID: 2100000, guid: 0dd566e2c32026d469ebd615b6d57544, type: 2}
-  - {fileID: 2100000, guid: a87f62bfc73d0b744a842318cec1869d, type: 2}
-  - {fileID: 2100000, guid: f26e0ed14e7553e4dbce1ec1fb3447a3, type: 2}
-  - {fileID: 2100000, guid: 7897e0ee0907d6d4e9522105224be9d6, type: 2}
-  - {fileID: 2100000, guid: 3e109e8cc4781814ab5a222a625aff94, type: 2}
-  - {fileID: 2100000, guid: 15d2f2de881a0584bac6852da67436b9, type: 2}
-  - {fileID: 2100000, guid: c7b38cb850417ca47916059e441cd7e3, type: 2}
-  - {fileID: 2100000, guid: 412da6d4cc3e3644c866e924d89a2335, type: 2}
-  - {fileID: 2100000, guid: 32aed1d9d55230541894c42b5789ed03, type: 2}
-  - {fileID: 2100000, guid: 7802268a0fa81c94e85880a5295fb65b, type: 2}
-  - {fileID: 2100000, guid: 2c20c4efa306ac946a6a72fc4bd3c2ca, type: 2}
+  tileList: []
   spawnPoints:
   - {fileID: 1163816670}
   - {fileID: 1018741233}
@@ -743,7 +727,7 @@ MonoBehaviour:
   - {fileID: 784276922}
   - {fileID: 1355479110}
   - {fileID: 190384126}
-  tilePrefab: {fileID: 8211872520642869322, guid: e1669bff014f03e4790a45b4fd19d08c, type: 3}
+  tilePrefab: {fileID: 6527900459360286692, guid: 08d55bcf78d1bc94a9f29374a0f6a3ed, type: 3}
 --- !u!1 &477099173
 GameObject:
   m_ObjectHideFlags: 0
@@ -1320,14 +1304,14 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -1378,13 +1362,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &784276921
 GameObject:
   m_ObjectHideFlags: 0
@@ -2988,6 +2972,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 387720581}
+        m_TargetAssemblyTypeName: TileManager, Assembly-CSharp
+        m_MethodName: StartGame
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

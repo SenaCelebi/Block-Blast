@@ -5,21 +5,31 @@ using UnityEngine.UI;
 
 public class TileController : MonoBehaviour
 {
-    public MeshRenderer meshRenderer;
-    public Tile tile;
- 
+    [HideInInspector]
+    public int color; 
 
- 
-    public void Initialize(Tile tile)
-    {
-        this.tile = tile;
-        meshRenderer.material = TileManager.instance.tileMaterials[(int)tile.type];
-
-    }
+    public TileType type;
+    public Vector3Int coordinates;
+    
    
+    public void Initialize(Vector3Int coordinates,TileType type)
+    {
+        this.type = type;
+        this.coordinates = coordinates;
+        this.gameObject.transform.GetChild((int)type).gameObject.SetActive(true);
+        color = (int)type;
+        SetName(coordinates);  
+    }
+
+    public void SetName(Vector3Int coordinates)
+    {
+        name = "X: " + coordinates.x + " Y: " + coordinates.y;
+    }
+    
     private void OnMouseDown()
     {
-        Debug.Log("clicked");
+        TileManager.instance.DestroyTiles(this);
+        Debug.Log("Clicked Object X: "+ this.coordinates.x+ " Clicked Object Y: " + this.coordinates.y);
     }
 
    
